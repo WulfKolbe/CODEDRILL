@@ -101,11 +101,12 @@ PYTHONPATH=src python -m codedrill compile path/to/tiddlers.json -o drills/myrun
 PYTHONPATH=src python -m codedrill languages
 ```
 
-To also cross-check the graph through **pdfdrill**'s document-layer compiler, put a
-pdfdrill checkout beside this repo and add `--pdfdrill`:
+To also cross-check the graph through **pdfdrill**'s document-layer compiler, point
+`PYTHONPATH` at your pdfdrill checkout (this ecosystem uses `~/MX/PDFDRILL`) and add
+`--pdfdrill`:
 
 ```bash
-PYTHONPATH="src:../pdfdrill/src" python -m codedrill compile tiddlers.json -o drills/run --pdfdrill
+PYTHONPATH="src:$HOME/MX/PDFDRILL/src" python -m codedrill compile tiddlers.json -o drills/run --pdfdrill
 ```
 
 pdfdrill's signature table is document-centric, so it validates the document/knowledge
@@ -118,13 +119,18 @@ upgrade slot), `".[llm]"` (LLM edge proposer, **off by default**), `".[dev]"` (p
 
 ## Drilling PDFs into tiddlers (pdfdrill + MathPix)
 
-`scripts/drill_pdf.sh` runs pdfdrill's MathPix OCR on a PDF/arXiv-id/URL, then feeds
-the resulting tiddlers JSON into `codedrill compile`. **You run this yourself** —
-codedrill never calls paid APIs on your behalf. It needs a sibling `pdfdrill` checkout
-and a git-ignored `.env` with your **rotated** keys (see security note).
+`scripts/drill_pdf.sh` runs pdfdrill's `tiddlers` route on a PDF/arXiv-id/URL (which
+auto-chains `model`→`mathpix`, falling back to free arXiv LaTeX / keyless tesseract OCR),
+then feeds the resulting tiddlers JSON into `codedrill compile`. **You run this
+yourself** — codedrill never calls paid APIs on your behalf. It uses the pdfdrill
+checkout at `~/MX/PDFDRILL` (override with `PDFDRILL_DIR=...`) and this repo's
+git-ignored `.env` with your **rotated** keys (see security note).
 
 ```bash
-PDFDRILL_DIR=../pdfdrill ./scripts/drill_pdf.sh 2401.12345 heim1972
+# arXiv id → FREE route (MathPix skipped by default):
+./scripts/drill_pdf.sh 2305.04710v1 heim1972
+# explicit pdfdrill location:
+PDFDRILL_DIR=~/MX/PDFDRILL ./scripts/drill_pdf.sh paper.pdf heim1972
 ```
 
 Drilled PDFs land in `pdfs/` and results in `drills/` — both are deliberately **kept**

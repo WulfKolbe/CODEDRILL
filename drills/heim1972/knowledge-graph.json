@@ -1,0 +1,593 @@
+{
+  "version": "1",
+  "kind": "knowledge",
+  "project": {
+    "name": "heim1972",
+    "languages": [
+      "python",
+      "typescript"
+    ],
+    "frameworks": [],
+    "description": "codedrill semantic graph of TiddlyWiki code/paragraph tiddlers",
+    "analyzedAt": "2026-06-21T14:06:40.717492+00:00",
+    "gitCommitHash": ""
+  },
+  "nodes": [
+    {
+      "id": "module:07dd5ea08874d375",
+      "type": "module",
+      "name": "mass_solver",
+      "summary": "module mass_solver",
+      "tags": [
+        "python",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "layer": "Core",
+        "section": "Methods — Mass Formula Solver"
+      }
+    },
+    {
+      "id": "class:c84e35e74dee4665",
+      "type": "class",
+      "name": "MassSolver",
+      "summary": "Iteratively solves the Heim mass eigenvalue recursion.",
+      "tags": [
+        "class",
+        "codedrill",
+        "python"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        4,
+        14
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.MassSolver"
+      }
+    },
+    {
+      "id": "function:9dce96837ce1f103",
+      "type": "function",
+      "name": "__init__",
+      "summary": "function __init__",
+      "tags": [
+        "python",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        6,
+        7
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.MassSolver.__init__"
+      }
+    },
+    {
+      "id": "function:c8b7ea18012707c3",
+      "type": "function",
+      "name": "solve",
+      "summary": "function solve",
+      "tags": [
+        "python",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        8,
+        10
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.MassSolver.solve"
+      }
+    },
+    {
+      "id": "function:cebfcee35c72f25d",
+      "type": "function",
+      "name": "_iterate",
+      "summary": "function _iterate",
+      "tags": [
+        "python",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        11,
+        14
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.MassSolver._iterate"
+      }
+    },
+    {
+      "id": "topic:fa9cc8e96149bc1e",
+      "type": "topic",
+      "name": "recursion",
+      "summary": "language concept: recursion",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:bef8884b967faa8f",
+      "type": "class",
+      "name": "CachedSolver",
+      "summary": "class CachedSolver",
+      "tags": [
+        "python",
+        "class",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        16,
+        24
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.CachedSolver"
+      }
+    },
+    {
+      "id": "function:215a43305b04fcb4",
+      "type": "function",
+      "name": "memoize",
+      "summary": "function memoize",
+      "tags": [
+        "python",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        18,
+        24
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.CachedSolver.memoize"
+      }
+    },
+    {
+      "id": "topic:94685f52fec10463",
+      "type": "topic",
+      "name": "decorator",
+      "summary": "language concept: decorator",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:3947a97e142f28e5",
+      "type": "topic",
+      "name": "staticmethod",
+      "summary": "language concept: staticmethod",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:fccb4d0788bb0422",
+      "type": "function",
+      "name": "run",
+      "summary": "function run",
+      "tags": [
+        "python",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        26,
+        27
+      ],
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_python_0001",
+        "qualified": "mass_solver.run"
+      }
+    },
+    {
+      "id": "module:bdebceea9a41a9bc",
+      "type": "module",
+      "name": "numpy",
+      "summary": "imported: numpy",
+      "tags": [
+        "import",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "module:69def143518e8a53",
+      "type": "module",
+      "name": "lattice.build_metric",
+      "summary": "imported: lattice.build_metric",
+      "tags": [
+        "import",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "module:96c1f097818bc061",
+      "type": "module",
+      "name": "solverClient",
+      "summary": "module solverClient",
+      "tags": [
+        "typescript",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_typescript_0001",
+        "layer": "Core",
+        "section": "Methods — Mass Formula Solver"
+      }
+    },
+    {
+      "id": "module:163f20c759e503b3",
+      "type": "module",
+      "name": "./types",
+      "summary": "imported: ./types",
+      "tags": [
+        "import",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:e4ca224fd0e08b99",
+      "type": "class",
+      "name": "SolverConfig",
+      "summary": "class SolverConfig",
+      "tags": [
+        "typescript",
+        "class",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_typescript_0001"
+      }
+    },
+    {
+      "id": "class:562042554d25d842",
+      "type": "class",
+      "name": "SolverClient",
+      "summary": "class SolverClient",
+      "tags": [
+        "typescript",
+        "class",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_typescript_0001"
+      }
+    },
+    {
+      "id": "function:d7f8aedbfbb85b30",
+      "type": "function",
+      "name": "makeClient",
+      "summary": "function makeClient",
+      "tags": [
+        "typescript",
+        "function",
+        "codedrill"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_typescript_0001"
+      }
+    },
+    {
+      "id": "topic:eec0298c44e0ff5c",
+      "type": "topic",
+      "name": "arrow-function",
+      "summary": "language concept: arrow-function",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:6a8d691c510ba24c",
+      "type": "topic",
+      "name": "async",
+      "summary": "language concept: async",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:d1528ce3c0fab583",
+      "type": "topic",
+      "name": "exception-handling",
+      "summary": "language concept: exception-handling",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:e9ce8922b89ccc69",
+      "type": "topic",
+      "name": "generics",
+      "summary": "language concept: generics",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:1ed636920d6f9a13",
+      "type": "topic",
+      "name": "interface",
+      "summary": "language concept: interface",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:18a0673400287515",
+      "type": "topic",
+      "name": "promise",
+      "summary": "language concept: promise",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "topic:435a3a2131027fe2",
+      "type": "topic",
+      "name": "type-hints",
+      "summary": "language concept: type-hints",
+      "tags": [
+        "concept",
+        "codedrill"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "article:d2229be031d46165",
+      "type": "article",
+      "name": "heim1972_paragraph_0001",
+      "summary": "paragraph heim1972_paragraph_0001",
+      "tags": [
+        "codedrill",
+        "paragraph"
+      ],
+      "complexity": "simple",
+      "knowledgeMeta": {
+        "sourceTiddler": "heim1972_paragraph_0001"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "module:07dd5ea08874d375",
+      "target": "class:c84e35e74dee4665",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:c84e35e74dee4665",
+      "target": "function:9dce96837ce1f103",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:c84e35e74dee4665",
+      "target": "function:c8b7ea18012707c3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:c84e35e74dee4665",
+      "target": "function:cebfcee35c72f25d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:cebfcee35c72f25d",
+      "target": "topic:fa9cc8e96149bc1e",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:07dd5ea08874d375",
+      "target": "class:bef8884b967faa8f",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:bef8884b967faa8f",
+      "target": "class:c84e35e74dee4665",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:bef8884b967faa8f",
+      "target": "function:215a43305b04fcb4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:215a43305b04fcb4",
+      "target": "topic:94685f52fec10463",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:215a43305b04fcb4",
+      "target": "topic:3947a97e142f28e5",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:07dd5ea08874d375",
+      "target": "function:fccb4d0788bb0422",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:07dd5ea08874d375",
+      "target": "module:bdebceea9a41a9bc",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:07dd5ea08874d375",
+      "target": "module:69def143518e8a53",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:fccb4d0788bb0422",
+      "target": "function:c8b7ea18012707c3",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:c8b7ea18012707c3",
+      "target": "function:cebfcee35c72f25d",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "module:163f20c759e503b3",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "class:e4ca224fd0e08b99",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "class:562042554d25d842",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "function:d7f8aedbfbb85b30",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:eec0298c44e0ff5c",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:6a8d691c510ba24c",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:d1528ce3c0fab583",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:e9ce8922b89ccc69",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:1ed636920d6f9a13",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:18a0673400287515",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "module:96c1f097818bc061",
+      "target": "topic:435a3a2131027fe2",
+      "type": "exemplifies",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "article:d2229be031d46165",
+      "target": "module:07dd5ea08874d375",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 1.0,
+      "description": "transclusion"
+    },
+    {
+      "source": "article:d2229be031d46165",
+      "target": "module:96c1f097818bc061",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 1.0,
+      "description": "transclusion"
+    }
+  ],
+  "layers": [],
+  "tour": []
+}
