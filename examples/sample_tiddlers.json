@@ -1,0 +1,23 @@
+[
+  {
+    "title": "heim1972_paragraph_0001",
+    "tags": "paragraph",
+    "bibkey": "heim1972",
+    "section": "Methods — Mass Formula Solver",
+    "text": "The solver bootstraps the eigenvalue recursion described in §3. Its core is implemented here {{heim1972_python_0001}} and the TypeScript front-end that drives it is {{heim1972_typescript_0001||$:/codedrill/codeview}}."
+  },
+  {
+    "title": "heim1972_python_0001",
+    "tags": "python",
+    "type": "text/x-python",
+    "module": "mass_solver",
+    "text": "import numpy as np\nfrom .lattice import build_metric\n\nclass MassSolver:\n    \"\"\"Iteratively solves the Heim mass eigenvalue recursion.\"\"\"\n    def __init__(self, dims):\n        self.dims = dims\n    def solve(self, seed):\n        m = build_metric(self.dims)\n        return self._iterate(m, seed)\n    def _iterate(self, m, seed):\n        if seed < 1e-9:\n            return seed\n        return self._iterate(m, seed / 2)\n\nclass CachedSolver(MassSolver):\n    @staticmethod\n    def memoize(fn):\n        cache = {}\n        def wrapped(*a):\n            if a not in cache:\n                cache[a] = fn(*a)\n            return cache[a]\n        return wrapped\n\ndef run(dims, seed):\n    return MassSolver(dims).solve(seed)\n"
+  },
+  {
+    "title": "heim1972_typescript_0001",
+    "tags": "typescript",
+    "type": "application/typescript",
+    "module": "solverClient",
+    "text": "import { MassResult } from './types';\n\nexport interface SolverConfig { dims: number; seed: number; }\n\nexport class SolverClient<T extends MassResult> {\n  constructor(private config: SolverConfig) {}\n  async solve(): Promise<T> {\n    try {\n      const r = await fetch('/api/solve');\n      return await r.json();\n    } catch (e) { throw e; }\n  }\n}\n\nexport const makeClient = (c: SolverConfig) => new SolverClient(c);\n"
+  }
+]

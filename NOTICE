@@ -1,0 +1,26 @@
+codedrill
+Copyright (c) 2026 Wulf Kolbe
+Licensed under the MIT License (see LICENSE).
+
+This product bootstraps from and adapts the following works:
+
+1. pdfdrill (Wulf Kolbe)
+   The deterministic semantic graph, the content-hash (blake2b) node identity, and
+   the type-checking compiler philosophy in `src/codedrill/schema.py` are derived from
+   pdfdrill's `src/semantic` package. `src/codedrill/pdfdrill_adapter.py` projects a
+   codedrill graph into pdfdrill's `SemanticGraph` to reuse its compiler unchanged.
+
+2. Understand-Anything — Egonex-AI (MIT License)
+   https://github.com/Egonex-AI/Understand-Anything
+   The knowledge-graph contract is adapted from
+   understand-anything-plugin/packages/core/src/schema.ts, specifically:
+     - the canonical node-type and edge-type vocabularies (NODE_TYPES / EDGE_TYPES),
+     - the LLM-output alias-normalization tables (NODE_TYPE_ALIASES / EDGE_TYPE_ALIASES /
+       COMPLEXITY_ALIASES) in `src/codedrill/schema.py`,
+     - the layer-detector heuristic (API/Service/Data/UI/Utility) in `src/codedrill/context.py`,
+     - the language-concept catalogue in `src/codedrill/concepts.py`,
+   so that a codedrill `knowledge-graph.json` round-trips through Understand-Anything's
+   dashboard and merge tooling unchanged.
+
+   Understand-Anything is distributed under the MIT License. A copy of the MIT License
+   terms (which also govern codedrill) is in LICENSE.

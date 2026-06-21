@@ -1,0 +1,29 @@
+# --- secrets: NEVER commit -------------------------------------------------
+.env
+.env.*
+!.env.example
+env.txt
+*.key
+*.pem
+secrets/
+
+# --- python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# --- codedrill working output ----------------------------------------------
+drills/out/
+drills/cdtest*/
+_unzip/
+
+# --- editor/OS -------------------------------------------------------------
+.DS_Store
+*.swp
+.idea/
+.vscode/

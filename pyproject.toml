@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codedrill"
+version = "0.1.0"
+description = "A semantic compiler for TiddlyWiki code/paragraph tiddlers (pdfdrill ecosystem)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Wulf Kolbe" }]
+keywords = ["tiddlywiki", "knowledge-graph", "semantic", "pdfdrill", "ast"]
+# Core is stdlib-only — no runtime dependencies.
+dependencies = []
+
+[project.optional-dependencies]
+ts = ["tree-sitter-languages>=1.10"]   # optional precise TypeScript extraction (upgrade slot)
+llm = []                                # optional, env-gated edge proposer (bring your own SDK)
+dev = ["pytest>=7"]
+
+[project.scripts]
+codedrill = "codedrill.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
